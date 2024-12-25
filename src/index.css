@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.main {
+    -webkit-app-region: drag;
+    overflow: hidden
+}
+
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    height: 100vh;
+    width: 250px;
+    padding: 57px 53px 51px 51px;
+}
