@@ -6,15 +6,22 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
-.main {
+#app {
     -webkit-app-region: drag;
-    overflow: hidden
+    overflow: hidden;
+
 }
+
+.main {
+    background: url('./assets/1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 .sidebar {
     background-color: rgba(0, 0, 0, 0.3);
     width: max-content;
     height: 100vh;
-    width: 250px;
     padding: 57px 53px 51px 51px;
 }
