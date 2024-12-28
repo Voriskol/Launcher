@@ -7,10 +7,13 @@
 }
 
 #app {
+    display: grid;
+    grid-template-columns: 30% 70%;
     overflow: hidden;
     background: url('./assets/backgrounds/PlanetOfLana.png');
     background-position: center;
     background-size: 110%;
+
 
 }
 

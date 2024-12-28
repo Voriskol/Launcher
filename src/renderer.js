@@ -29,8 +29,13 @@
 import "./index.css";
 import { createApp } from "vue";
 import App from "./App.vue";
+import PrimeVue from "primevue/config";
+import Carousel from "primevue/carousel";
 
-createApp(App).mount("#app");
+const app = createApp(App);
+app.mount("#app");
+app.use(PrimeVue);
+app.component("Carousel", Carousel);
 
 console.log(
   `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`
