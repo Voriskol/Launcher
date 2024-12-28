@@ -7,17 +7,27 @@
 }
 
 #app {
-    -webkit-app-region: drag;
     overflow: hidden;
+    background: url('./assets/backgrounds/PlanetOfLana.png');
+    background-position: center;
+    background-size: 110%;
 
 }
 
-.main {
-    background: url('./assets/1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+main {
+    padding: 35px 50px 44px 52px
 }
 
+
+button {
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+button:hover {
+    color: white;
+}
 
 .sidebar {
     background-color: rgba(0, 0, 0, 0.3);

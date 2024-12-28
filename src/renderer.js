@@ -33,5 +33,5 @@ import App from "./App.vue";
 createApp(App).mount("#app");
 
 console.log(
-  '👋 This message is being logged by "renderer.js", included via Vite'
+  `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`
 );
