@@ -31,11 +31,17 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import PrimeVue from "primevue/config";
 import Carousel from "primevue/carousel";
+import Button from "primevue/button";
+import Tag from "primevue/tag";
 
 const app = createApp(App);
-app.mount("#app");
+
 app.use(PrimeVue);
 app.component("Carousel", Carousel);
+app.component("Button", Button);
+app.component("Tag", Tag);
+
+app.mount("#app");
 
 console.log(
   `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`

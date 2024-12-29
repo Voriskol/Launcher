@@ -1,42 +1,30 @@
+<script setup>
+import { ref, onMounted, watch } from "vue";
+import { ProductService } from "../service/ProductService";
+const products = ref();
+onMounted(() => {
+  ProductService.getProducts().then((data) => (products.value = data));
+});
+</script>
 <template>
   <Carousel
-    :numVisible="3"
-    :numScroll="3"
-    :responsiveOptions="responsiveOptions"
+    :value="products"
+    :numVisible="1"
+    :numScroll="1"
+    circular
+    :showNavigators="false"
+    :autoplayInterval="5000"
   >
     <template #item="slotProps">
-      <div
-        class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4"
-      >
+      <div class="rounded mt-4">
         <div class="mb-4">
           <div class="relative mx-auto">
-            <img
-              :src="
-                'https://primefaces.org/cdn/primevue/images/product/' +
-                slotProps.data.image
-              "
-              :alt="slotProps.data.name"
-              class="w-full rounded"
-            />
-            <Tag
-              :value="slotProps.data.inventoryStatus"
-              :severity="getSeverity(slotProps.data.inventoryStatus)"
-              class="absolute"
-              style="left: 5px; top: 5px"
-            />
+            <img :src="slotProps.data.image" class="w-full rounded" />
           </div>
-        </div>
-        <div class="mb-4 font-medium">{{ slotProps.data.name }}</div>
-        <div class="flex justify-between items-center">
-          <div class="mt-0 font-semibold text-xl">
-            ${{ slotProps.data.price }}
-          </div>
-          <span>
-            <Button icon="pi pi-heart" severity="secondary" outlined />
-            <Button icon="pi pi-shopping-cart" class="ml-2" />
-          </span>
         </div>
       </div>
     </template>
   </Carousel>
 </template>
+
+<style scoped></style>
